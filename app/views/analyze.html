@@ -1,0 +1,10 @@
+<div id="analyze-form">
+    <form novalidate class="simple-form">
+        Article: <textarea ng-model="article" placeholder="Paste article copy here..." >
+        </textarea><br /><br />
+        <button ng-click="reset()">CLEAR</button>
+        <button ng-click="update(article)">PROCESS</button>
+    </form>
+    <pre>form = {{ article | json }}</pre>
+    <pre>master = {{ master | json }}</pre>
+</div>
