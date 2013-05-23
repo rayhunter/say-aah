@@ -25,9 +25,10 @@ sayAahApp.controller('AnalyzeCtrl', function( $scope, $http ) {
     $scope.data = angular.copy(article);
 
     $.ajax({
-        url:"http://access.alchemyapi.com/calls/text/TextGetCategory?apikey=b24e5860c2091260bc776c7e075b9532f5e1a259&outputMode=json&showSourceText=1&jsonp=?",
+        url:"http://access.alchemyapi.com/calls/text/TextGetRankedKeywords?apikey=b24e5860c2091260bc776c7e075b9532f5e1a259&outputMode=json&showSourceText=1&jsonp=?",
+        //url:"http://access.alchemyapi.com/calls/text/TextGetCategory?apikey=b24e5860c2091260bc776c7e075b9532f5e1a259&outputMode=json&showSourceText=1&jsonp=?",
         type: 'POST',
-        data: $scope.data,
+        text: $scope.data,
         dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
         success:function(json){
             // do stuff with json (in this case an array)
