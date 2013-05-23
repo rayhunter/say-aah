@@ -1,11 +1,32 @@
+<div id = "titlediv">
+	<img src = "img/LogoSAYAhh.png" class = "titleimage">
+</div>
+
 <div id="analyze-form">
     <form novalidate class="simple-form">
-        Article: <textarea ng-model="article" placeholder="Paste article copy here..." >
-        </textarea><br /><br />
+    <h2>Title:</h2>
+    <textarea ng-model="article" placeholder="Paste article title here..." style = "height: 50px"></textarea><br /><br />
+    <h2>Article Content:</h2>
+    <textarea ng-model="article" placeholder="Paste article copy here..." style = "height: 285px"></textarea><br /><br />
+    <pre>form = {{ article | json }}</pre>
+    		<div id="target">
+    			<p>These are your suggested tags</p>
+			</div>
+	<br>
+    <pre>master = {{ master | json }}</pre>
+        	<div id="target">
+    			<p>These are your suggested categories</p>
+			</div>
+	<br>
         <button ng-click="reset()">CLEAR</button>
         <button ng-click="update(article)">PROCESS</button>
+
     </form>
+<<<<<<< Updated upstream
     <pre>form = {{ article | json }}</pre>
     <pre>master = {{ master | json }}</pre>
     <pre>data = {{ data }}</pre>
+=======
+
+>>>>>>> Stashed changes
 </div>

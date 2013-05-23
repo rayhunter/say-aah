@@ -22,6 +22,7 @@ sayAahApp.controller('AnalyzeCtrl', function( $scope, $http ) {
 
   $scope.update = function(article) {
     $scope.master= angular.copy(article);
+<<<<<<< Updated upstream
     $scope.data = angular.copy(article);
 
     $.ajax({
@@ -61,6 +62,10 @@ sayAahApp.controller('AnalyzeCtrl', function( $scope, $http ) {
       cache : false,
       dataType : 'json',
     }); */
+=======
+    $('div#target').toggle("slow");
+    return false;
+>>>>>>> Stashed changes
   };
  
   $scope.reset = function() {
