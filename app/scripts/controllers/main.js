@@ -11,7 +11,8 @@ sayAahApp.controller('MainCtrl', function($scope) {
     $scope.user = angular.copy($scope.master);
   };
  
-  $scope.reset();  
+  $scope.reset();
+    
   $scope.awesomeThings = [
     'Analyze Article',
   ];
