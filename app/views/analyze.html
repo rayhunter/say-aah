@@ -9,13 +9,15 @@
     <h2>Article Content:</h2>
     <textarea ng-model="article" placeholder="Paste article copy here..." style = "height: 285px"></textarea><br /><br />
     <pre>form = {{ article | json }}</pre>
-    		<div id="target">
-    			<p>These are your suggested tags</p>
+    		<div id="target" class="tags">
+    			<p><b>These are your suggested tags:</b></p>
+    			<span></span>
 			</div>
 	<br>
     <pre>master = {{ master | json }}</pre>
-        	<div id="target">
-    			<p>These are your suggested categories</p>
+        	<div id="target" class="categories">
+    			<p><b>These are your suggested categories:</b></p>
+    			<span></span>
 			</div>
 	<br>
         <button ng-click="reset()">CLEAR</button>
