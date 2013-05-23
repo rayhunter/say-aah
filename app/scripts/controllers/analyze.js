@@ -22,8 +22,9 @@ sayAahApp.controller('AnalyzeCtrl', function( $scope, $http ) {
 
   $scope.update = function(article) {
     $scope.master= angular.copy(article);
-<<<<<<< Updated upstream
     $scope.data = angular.copy(article);
+    $('div#target').toggle("slow");
+    return false;
 
     $.ajax({
         url:"http://access.alchemyapi.com/calls/text/TextGetRankedKeywords?apikey=b24e5860c2091260bc776c7e075b9532f5e1a259&outputMode=json&showSourceText=1&jsonp=?",
@@ -62,10 +63,6 @@ sayAahApp.controller('AnalyzeCtrl', function( $scope, $http ) {
       cache : false,
       dataType : 'json',
     }); */
-=======
-    $('div#target').toggle("slow");
-    return false;
->>>>>>> Stashed changes
   };
  
   $scope.reset = function() {
