@@ -5,12 +5,12 @@
 <div id="analyze-form">
     <form novalidate class="simple-form">
     <h2>Title:</h2>
-    <textarea ng-model="article" placeholder="Paste article title here..." style = "height: 50px"></textarea><br /><br />
+    <textarea ng-model="title" placeholder="Paste article title here..." style = "height: 50px"></textarea><br /><br />
     <h2>Article Content:</h2>
     <textarea ng-model="article" placeholder="Paste article copy here..." style = "height: 285px"></textarea><br /><br />
     <div class="current">
         <em>current tags</em>
-        <pre>fashion, diy, family drama, fun, healthy, it happened to me, new agey, relationships, sports, tech</pre>
+            <textarea ng-model="tags" placeholder="Paste article tags here..." style = "height: 35px"></textarea><br /><br />
     </div>
 
     <div id="target" class="tags">
@@ -21,10 +21,10 @@
 	
     <div class="current">
 	    <em>current category</em>
-	    <pre>clothes, beauty, sex/love, entertainment, jane's stuff</pre>
+        <textarea ng-model="categories" placeholder="Paste article categories here..." style = "height: 35px"></textarea><br /><br />
     </div>
 
-    <div id="target" class="categories">
+    <div id="target1" class="categories" style = "display:none; width:97.5%; background:lightblue; border:1px solid blue; border-radius: 5px; padding: 10px;">
     	<p><b>These are your suggested categories:</b></p>
     	<span></span>
 	</div>
