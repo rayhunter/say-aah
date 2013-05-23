@@ -1,6 +1,6 @@
 'use strict';
 
-var sayAahApp = angular.module('sayAahApp', [])
+var sayAahApp = angular.module('sayAahApp', ['ngResource'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -14,4 +14,8 @@ var sayAahApp = angular.module('sayAahApp', [])
       .otherwise({
         redirectTo: '/'*/
       });
-  }]);
+  }],
+  ['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.headers.post  = {'Content-Type': 'application/x-www-form-urlencoded'};
+  }]
+);
