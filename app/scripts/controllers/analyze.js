@@ -4,6 +4,7 @@ sayAahApp.controller('AnalyzeCtrl', function( $scope, $http ) {
   $scope.master= {};
   $scope.placeholder= {};
   $scope.request='';
+  $( 'div.current' ).hide();
   
   var config = {
   	headers:  {
@@ -17,6 +18,7 @@ sayAahApp.controller('AnalyzeCtrl', function( $scope, $http ) {
     $scope.master= angular.copy(article);
     $scope.data = angular.copy(article);
     $.articleText = angular.copy(article);
+    $('div.current').show();
 
     $.ajax({
         url: "http://access.alchemyapi.com/calls/text/TextGetRankedKeywords?apikey=b24e5860c2091260bc776c7e075b9532f5e1a259&outputMode=json&showSourceText=1&text="+$.articleText+"&jsonp=?",
@@ -52,7 +54,10 @@ $.ajax({
   };
  
   $scope.reset = function() {
-    $scope.article = angular.copy( $scope.master );
+    //$scope.article = angular.copy( $scope.master );
+    $scope.article = "";
+    $scope.master = "";
+    $( 'div.current' ).hide( "slow" );
     $( 'div#target' ).hide( "slow" );
   };
  

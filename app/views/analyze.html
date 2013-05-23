@@ -8,18 +8,28 @@
     <textarea ng-model="article" placeholder="Paste article title here..." style = "height: 50px"></textarea><br /><br />
     <h2>Article Content:</h2>
     <textarea ng-model="article" placeholder="Paste article copy here..." style = "height: 285px"></textarea><br /><br />
-    <pre>form = {{ article | json }}</pre>
-    		<div id="target" class="tags">
-    			<p><b>These are your suggested tags:</b></p>
-    			<span></span>
-			</div>
+    <div class="current">
+        <em>current tags</em>
+        <pre>fashion, diy, family drama, fun, healthy, it happened to me, new agey, relationships, sports, tech</pre>
+    </div>
+
+    <div id="target" class="tags">
+    	<p><b>These are your suggested tags:</b></p>
+    	<span></span>
+	</div>
 	<br>
-    <pre>master = {{ master | json }}</pre>
-        	<div id="target" class="categories">
-    			<p><b>These are your suggested categories:</b></p>
-    			<span></span>
-			</div>
+	
+    <div class="current">
+	    <em>current category</em>
+	    <pre>clothes, beauty, sex/love, entertainment, jane's stuff</pre>
+    </div>
+
+    <div id="target" class="categories">
+    	<p><b>These are your suggested categories:</b></p>
+    	<span></span>
+	</div>
 	<br>
+	
         <button ng-click="reset()">CLEAR</button>
         <button ng-click="update(article)">PROCESS</button>
 
