@@ -23,14 +23,13 @@ sayAahApp.controller('AnalyzeCtrl', function( $scope, $http ) {
   $scope.update = function(article) {
     $scope.master= angular.copy(article);
     $scope.data = angular.copy(article);
-    $('div#target').toggle("slow");
-    return false;
+    $.articleText = angular.copy(article);
 
     $.ajax({
-        url:"http://access.alchemyapi.com/calls/text/TextGetRankedKeywords?apikey=b24e5860c2091260bc776c7e075b9532f5e1a259&outputMode=json&showSourceText=1&jsonp=?",
+        url:"http://access.alchemyapi.com/calls/text/TextGetRankedKeywords?apikey=b24e5860c2091260bc776c7e075b9532f5e1a259&outputMode=json&showSourceText=1&text="+$.articleText+"&jsonp=?",
         //url:"http://access.alchemyapi.com/calls/text/TextGetCategory?apikey=b24e5860c2091260bc776c7e075b9532f5e1a259&outputMode=json&showSourceText=1&jsonp=?",
         type: 'POST',
-        text: $scope.data,
+        data: [{ text: $scope.data }],
         dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
         success:function(json){
             // do stuff with json (in this case an array)
@@ -40,6 +39,9 @@ sayAahApp.controller('AnalyzeCtrl', function( $scope, $http ) {
             alert("Error");
         },
     });
+
+    $('div#target').show("slow");
+    return false;
 
     //$http.post("http://access.alchemyapi.com/calls/text/TextGetCategory", { "apikey":"b24e5860c2091260bc776c7e075b9532f5e1a259","outputMode":"json", "showSourceText": 1, "data": $scope.data })
      
@@ -67,6 +69,7 @@ sayAahApp.controller('AnalyzeCtrl', function( $scope, $http ) {
  
   $scope.reset = function() {
     $scope.article = angular.copy($scope.master);
+    $('div#target').hide("slow");
   };
  
   $scope.reset();
