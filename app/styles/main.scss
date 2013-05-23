@@ -2,12 +2,47 @@
 
 #analyze-form {
     border: 1px solid #ccc;
+    border-radius: 15px;
     margin: 1.5em 0 0 0;
     padding: 1.5em;
+    background: #ffffff;
 }
 
 .simple-form textarea {
-    width: 50em;
-    height: 20em;
-    margin: 0 1.5em;
+	margin: 0px 20.9896px;
+	width: 880px;
+	margin-left: 1px;
+}
+
+#titlediv{
+	height: auto;
+	vertical-align: middle;
+	border: 0px none;
+	background-color: white;
+	padding: 5%;
+	border-radius: 20px;
+	margin-top:35px;
+}
+
+.titleimage{
+	max-width: 53%;
+	height: auto;
+	vertical-align: middle;
+	border: 0;
+	padding-left: 25%;
+	padding-bottom: 2%;
+}
+
+body{
+	background-color: #333333;
+	font-family: BentonSans, Helevetica, Arial;
+}
+
+#target {
+    display:none;
+    width:97.5%;
+    background:lightblue;
+    border:1px solid blue;
+    border-radius: 5px;
+    padding: 10px;
 }
